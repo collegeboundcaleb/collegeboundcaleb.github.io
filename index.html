@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+
+        <!--- Links our 2 css style sheets to the main website-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
+
+    </head>
+
+    <body>
+        <!-- Navigation at top of page that will take the user to sections of the webpage-->
+        <nav id="desktop-nav">
+            <div class="logo">Caleb Carpenter</div>
+            <div>
+                <!--Top of page links--> 
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        
+        </nav>
+
+        <!--Navigation for hamburger dropdown menu-->
+        <nav id="hamburger-nav">
+            <div class="logo">Caleb Carpenter</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <!--Lines of the hamburger dropdown-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!--Links that will be openend with dropdown menu-->
+                <div class="menu-links">
+                    <!--Onclick closes hamburger when link is clicked-->
+                    <li><a href="#about"onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience"onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects"onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>    
+                </div>
+
+            </div>
+
+
+        </nav>
+
+        <!--Profile picture, LinkedIn, and Github, Intro text-->
+        <section id="profile">
+            <!--Inserting profile picture-->
+            <div class="section_pic-container">
+                <img src="./assets/profile-pic.png" alt="John Doe profile picture">
+            </div>
+            <div class="section__text">
+                <p class="section__text_p1">Hello, I am</p>
+                <h1 class="title">Caleb Carpenter</h1>
+                <p class="section__text__p2">Computer Science Major</p>
+                <div class="btn-container">
+                    <!-- Button for showing resume-->
+                    <button class="btn btn-color-2" onclick="window.open
+                    ('./assets/Caleb Carpenter Resume General.pdf')">Download
+                     CV
+                    </button>
+
+                    <!--Button for sending person to contact section -->
+                    <button class="btn btn-color-1" onclick="location.href=
+                    './#contact'">Contact Info
+                    </button>
+                    
+                </div>
+                <div id="socials-container">
+
+                    <!--Image sending user to LinkedIn-->
+                    <img 
+                    src="./assets/linkedin.png" 
+                    alt="My LinkedIn profile" 
+                    class="icon" 
+                    onclick="window.open('https://www.linkedin.com/in/caleb-carpenter-a8ba66297/', '_blank')" >
+                    
+                    <!--Image sending user to Github-->
+                    <img 
+                    src="./assets/github.png" 
+                    alt="My Github profile" 
+                    class="icon" 
+                    onclick="window.open('https://github.com/collegeboundcaleb', '_blank')" >
+                </div>
+
+            </div>
+        </section>
+
+        <!--Setup for the "about" section (picture, education, brief experience, about me paragraph)-->
+        <section id="about">
+            <p class="section__text_p1">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <!--Picture of me on hill-->
+                <div class="section__pic-container">
+                    <img src="./assets/about-pic.jpg" 
+                    alt="Profile picture" 
+                    class="about-pic"
+                    />
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+
+                        <div class="details-container">
+                            <img src="./assets/experience.png" 
+                            alt="Experience icon"
+                            class="icon"
+                            />
+                            <h3>Experience</h3>
+                            <p>2+ years
+                                <br>Lead Competitive Programmer
+                                <br> Robotics Team Captain
+                            </p>
+                        </div>
+                        <div class="details-container">
+                            <img src="./assets/education.png" 
+                            alt="Education icon"
+                            class="icon"
+                            />
+                            <h3>Education</h3>
+                            <p>B.Sc Computer Science
+                                <br>University of Arkansas
+                                <br>Class of 2027
+                            </p>
+
+                        </div>
+                    </div>
+                    <!--Text in About section-->
+                    <div class="text-container">
+                        <p>My name is Caleb Carpenter, and I am attending the University of Arkansas for Computer Science. I grew up in Oklahoma, but due to my father's military status, I spent my high school career at RAF Lakenheath, England. I first found my love of programming when I joined my school's robotics team, and have been honing my craft ever since. In my free time, I enjoy creating programming projects that I upload to my own website.</p>
+                    </div>
+                </div>
+            </div>
+            <!--Arrow to move user down to experience section-->
+            <img 
+                src ="./assets/arrow.png" 
+                alt="Arrow icon" 
+                class="icon arrow" 
+                onclick="location.href='./#experience'"
+            />
+        </section>
+
+        <!--Setup for the "experience" section (List of skills)-->
+        <section id="experience">
+            <p class="section__text_p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>CSS</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Java</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Python</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Vuforia</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>JavaScript</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        
+                        <h2 class="experience-sub-title">Backend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Fill in</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Fill In</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Fill in</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Fill in</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>Fill in</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png"
+                                alt="Experience icon"
+                                class="icon"
+                                />
+                                <div>
+                                    <h3>JavaScript</h3>
+                                    <p>Experienced</p>
+                                </div>
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img 
+                src ="./assets/arrow.png" 
+                alt="Arrow icon" 
+                class="icon arrow" 
+                onclick="location.href='./#projects'"
+            />
+        </section>
+        
+        <!--Setup for the "Projects" section-->
+        <section id="projects">
+            <p class="section__text_p1">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img 
+                            src="./assets/Comingsoon.png" 
+                            alt="Project 1"
+                            class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Website</h2>
+                        <div class="btn-container">
+                       
+                            <button 
+                            class="btn btn-color-2 project-btn" 
+                            onclick="location.href='https://github.com/collegeboundcaleb'">
+                            Github
+                            </button>
+                        
+                            <button 
+                            class="btn btn-color-2 project-btn" 
+                            onclick="location.href='https://github.com/collegeboundcaleb'">
+                            Live Demo
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img 
+                            src="./assets/Comingsoon.png" 
+                            alt="Project Two"
+                            class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Two</h2>
+                        <div class="btn-container">
+                       
+                            <button 
+                                class="btn btn-color-2 project-btn" 
+                                onclick="location.href='https://github.com/collegeboundcaleb'">
+                                Github
+                            </button>
+                        
+                            <button 
+                                class="btn btn-color-2 project-btn" 
+                                onclick="location.href='https://github.com/collegeboundcaleb'">
+                                Live Demo
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img 
+                            src="./assets/Comingsoon.png" 
+                            alt="Project Three"
+                            class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Three</h2>
+                        <div class="btn-container">
+                       
+                            <button 
+                                class="btn btn-color-2 project-btn" 
+                                onclick="location.href='https://github.com/collegeboundcaleb'">
+                                Github
+                            </button>
+                        
+                            <button 
+                                class="btn btn-color-2 project-btn" 
+                                onclick="location.href='https://github.com/collegeboundcaleb'">
+                                Live Demo
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img 
+            src ="./assets/arrow.png" 
+            alt="Arrow icon" 
+            class="icon arrow" 
+            onclick="location.href='./#contact'"
+        />
+        </section>
+
+        <!--Setup for "Contacts"-->
+        <section id="contact">
+            <p class="section__text_p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img
+                    src="./assets/email.png"
+                    alt="Email icon"
+                    class="icon contact-icon email-icon"
+                    />
+                    <p><a href="mailto:collegeboundcaleb@yahoo.com">collegeboundcaleb@yahoo.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img
+                    src="./assets/linkedin.png"
+                    alt="LinkedIn icon"
+                    class="icon contact-icon"
+                    />
+                    <p><a href="https://www.linkedin.com/in/caleb-carpenter-a8ba66297/" target="blank">LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2024 Caleb Carpenter All Rights Reserved.</p>
+        </footer>
+        <!--- Links java script file to main website-->
+        <script src="script.js"> </script>
+    </body>
+</html>
